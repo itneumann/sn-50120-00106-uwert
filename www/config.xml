@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "de.zeigewas.u-wert-quick"
-        version   = "1.1.0">
+        id        = "de.zeigewas.quirin-bank.provisions-rechner"
+        version   = "0.0.1">
     <name>U-Wert Quick</name>
 
     <description>
-		Das ideale Werkzeug für Architekten, Ingenieure, Handwerker und Heimwerker: Berechnen Sie mit ISOVER U-Wert-Quick schnell und einfach die erzielbaren Dämmwerte eines beliebigen Haus-Bauteils wie Außenwand, Kellerdecke und Steil- oder Flachdach anhand typischer Bauweisen und -materialien. Mit ISOVER U-Wert-Quick haben Sie stets ein unkompliziertes Werkzeug zur Hand, das mit wenigen, einfachen Eingaben den Wärmedurchgangskoeffizienten berechnet und anzeigt, ob aktuelle Vorgaben (EnEV, Passivhaus-Standard und Multi-Komfort) erfüllt werden.
-		Die Applikation ist selbsterklärend: Wählen Sie das gewünschte Bauteil, die geeigneten Materialstärken aus und mit der Wahl der zur Verfügung stehenden Dämmstoffe von ISOVER können Sie direkt ablesen, welcher U-Wert mit der optimalen Konstruktion erreichbar ist.
-		Weitere Informationen erhalten Sie bei ISOVER Dialog per Telefon +49 (0) 621 / 501 200, Fax +49 (0) 621 / 501 201 oder E-Mail: dialog@isover.de (Hierbei gilt der entsprechende Telefon-Tarif).
-
-		Bitte beachten Sie:
-		ISOVER U-Wert-Quick dient der einfachen U-Wert-Abschätzung und ist nicht geeignet, Nachweise nach EnEV zu erbringen. Diese Nachweise lassen sich mit den Programmen DämmCalc Hochbau 2.0 und EPASS-Helena führen. Diese erhalten Sie unter www.isover.de.
-
-		Nutzungsbedingungen:
-		Die App von ISOVER ist ein Hilfsmittel zur schnellen und einfachen Abschätzung des U-Wertes von Standardbauteilen. Eventuelle Sonderregelungen der EnEV sind nicht Gegenstand der App, wie z.B. geringere Anforderungen an den U-Wert aufgrund.
+		Ist die Beratung bei Ihrer Bank wirklich kostenlos?
+		Oder kostet sie richtig Geld in Form von versteckten Provisionen?
+		Finden Sie es heraus – mit unserem Provisionsrechner.
 	</description>
 
     <author href="http://www.zeigewas.de" email="support@zeigewas.de">
-        Zeigewas GmbH
+        zeigewas GmbH
     </author>
 
-
+	<!--
 	<preference name="permissions" value="none"/>
+	-->
     <feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/file"/>
-	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
     <preference name="phonegap-version" value="2.1.0" />
 	<preference name="orientation" value="portrait" />
     <preference name="target-device"    value="tablet" />
-    <preference name="fullscreen"       value="true" />
+    <preference name="fullscreen"       value="false" />
 	<preference name="webviewbounce"    value="false" />
+	<preference name="splash-screen-duration" value="10000" />
+	<preference name="exit-on-suspend" value="true" />
 
     <icon src="res/icon/icon.png" />
+	<!--
     <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
@@ -48,7 +45,10 @@
     <icon src="res/icon/webos/icon-64.png" gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png" gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone" gap:role="background" />
+	-->
 
+	<gap:splash src="res/screen/splash.jpg" />
+	<!--
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
@@ -59,4 +59,5 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios" width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios" width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
+    -->
 </widget>

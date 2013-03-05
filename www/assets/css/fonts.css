@@ -1,0 +1,51 @@
+/*
+
+FONT-DECLARATION
+------------------------------------------------------
+------------------------------------------------------
+
+Browser-Support:
+------------------------------------------------------
+------------------------------------------------------
+IE: 		  BOT from version 4; WOFF from Version 9
+Firefox:	  WOFF from version 3.6
+GoogleChrome: WOFF from version 6
+Opera:		  WOFF from version 11.10
+Safari: 	  WOFF none
+
+*/
+
+
+
+/* For Internet-Explorer < 9 */
+/* GROUP */
+
+@font-face { /*regular*/
+	font-family: OlsenWebPro;
+	src: url(../fonts/OlsenWebPro.eot);
+	src: url(../fonts/OlsenWebPro.woff) format("woff");
+	font-weight:normal;
+}
+
+
+@font-face { /*regular italic*/
+	font-family: OlsenWebPro;
+	src: url(../fonts/OlsenWebPro-Italic.eot);
+	src: url(../fonts/OlsenWebPro-Italic.woff) format("woff");
+	font-style: italic;
+}
+
+@font-face { /*bold*/
+	font-family: OlsenWebPro;
+	src: url(../fonts/OlsenWebPro-Bold.eot);
+	src: url(../fonts/OlsenWebPro-Bold.woff) format("woff");
+	font-weight: bold;
+}
+
+@font-face { /*bold italic*/
+	font-family: OlsenWebPro;
+	src: url(../fonts/OlsenWebPro-BoldItalic.eot);
+	src: url(../fonts/OlsenWebPro-BoldItalic.woff) format("woff");
+	font-weight: bold;
+	font-style: italic;
+}

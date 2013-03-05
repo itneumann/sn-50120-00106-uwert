@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlRoot>
+
+	<channel>
+		<title>{$xmlTitle}</title>
+	</channel>
+
+	{foreach item="n" key="nid" from=$newsList}
+
+    <item id="{$nid}">
+   		<date>{$n.timestamp|date_format:"%d.%m.%Y"}</date>
+		<link><![CDATA[{if $n.link}{$n.link}{/if}]]></link>
+		<header>
+			<short><![CDATA[{$n.title|truncate:23:'...':true}]]></short>
+			<long><![CDATA[{$n.title}]]></long>
+		</header>
+		<descr>
+			<short><![CDATA[{$n.descr|truncate:60:'...':true}]]></short>
+			<long><![CDATA[{$n.descr}]]></long>
+		</descr>
+    </item>
+
+	{/foreach}
+</xmlRoot>

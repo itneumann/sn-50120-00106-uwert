@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlRoot>
+
+		<contract id="13324000000026">
+		<id>13324000000026</id>
+		<name><![CDATA[Aktienfonds-Sparplan]]></name>
+		<calctype>0</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000001">
+		<id>13324000000001</id>
+		<name><![CDATA[Aktiv gemanagte Aktienfonds]]></name>
+		<calctype>2</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000000">
+		<id>13324000000000</id>
+		<name><![CDATA[Aktiv gemanagte Rentenfonds]]></name>
+		<calctype>2</calctype>
+		<commission>3.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000002">
+		<id>13324000000002</id>
+		<name><![CDATA[Baufinanzierungen]]></name>
+		<calctype>3</calctype>
+		<commission>1.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000003">
+		<id>13324000000003</id>
+		<name><![CDATA[Bausparvertrag]]></name>
+		<calctype>3</calctype>
+		<commission>1.60</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000004">
+		<id>13324000000004</id>
+		<name><![CDATA[Berufsunfähigkeitsversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000025">
+		<id>13324000000025</id>
+		<name><![CDATA[Dachfonds]]></name>
+		<calctype>2</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000028">
+		<id>13324000000028</id>
+		<name><![CDATA[Dachfonds-Sparplan]]></name>
+		<calctype>0</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000005">
+		<id>13324000000005</id>
+		<name><![CDATA[Festgeld]]></name>
+		<calctype>2</calctype>
+		<commission>0.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000006">
+		<id>13324000000006</id>
+		<name><![CDATA[Flugzeugbeteiligungen]]></name>
+		<calctype>2</calctype>
+		<commission>9.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000007">
+		<id>13324000000007</id>
+		<name><![CDATA[Fondsgebundene Lebensversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000008">
+		<id>13324000000008</id>
+		<name><![CDATA[Fondsgebundene Rentenversicherungsicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.50</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000009">
+		<id>13324000000009</id>
+		<name><![CDATA[Geldmarktfonds]]></name>
+		<calctype>2</calctype>
+		<commission>2.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000010">
+		<id>13324000000010</id>
+		<name><![CDATA[Geschlossene Immobilienfonds]]></name>
+		<calctype>2</calctype>
+		<commission>12.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000011">
+		<id>13324000000011</id>
+		<name><![CDATA[Kapitallebensversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000012">
+		<id>13324000000012</id>
+		<name><![CDATA[Kraftfahrzeugversicherung]]></name>
+		<calctype>4</calctype>
+		<commission>8.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000013">
+		<id>13324000000013</id>
+		<name><![CDATA[Medienfonds]]></name>
+		<calctype>2</calctype>
+		<commission>8.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000014">
+		<id>13324000000014</id>
+		<name><![CDATA[Mischfonds]]></name>
+		<calctype>2</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000029">
+		<id>13324000000029</id>
+		<name><![CDATA[Mischfonds (Sparplan)]]></name>
+		<calctype>0</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000015">
+		<id>13324000000015</id>
+		<name><![CDATA[Offene Immobilienfonds]]></name>
+		<calctype>2</calctype>
+		<commission>4.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000030">
+		<id>13324000000030</id>
+		<name><![CDATA[Offene Immobilienfonds (Sparplan)]]></name>
+		<calctype>0</calctype>
+		<commission>5.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000016">
+		<id>13324000000016</id>
+		<name><![CDATA[Private Equity-Fonds]]></name>
+		<calctype>2</calctype>
+		<commission>8.50</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000017">
+		<id>13324000000017</id>
+		<name><![CDATA[Private Krankenvollversicherung]]></name>
+		<calctype>1</calctype>
+		<commission>7.50</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000018">
+		<id>13324000000018</id>
+		<name><![CDATA[Private Krankenzusatzversicherung]]></name>
+		<calctype>1</calctype>
+		<commission>7.50</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000019">
+		<id>13324000000019</id>
+		<name><![CDATA[Private Rentenversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000020">
+		<id>13324000000020</id>
+		<name><![CDATA[Private Sachversicherungen]]></name>
+		<calctype>4</calctype>
+		<commission>25.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000027">
+		<id>13324000000027</id>
+		<name><![CDATA[Rentenfonds-Sparplan]]></name>
+		<calctype>0</calctype>
+		<commission>3.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000021">
+		<id>13324000000021</id>
+		<name><![CDATA[Riester Rentenversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000022">
+		<id>13324000000022</id>
+		<name><![CDATA[Risikolebensversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000023">
+		<id>13324000000023</id>
+		<name><![CDATA[Rürüp Rentenversicherung]]></name>
+		<calctype>0</calctype>
+		<commission>4.25</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		<contract id="13324000000024">
+		<id>13324000000024</id>
+		<name><![CDATA[Schiffsbeteiligungen]]></name>
+		<calctype>2</calctype>
+		<commission>12.00</commission>
+		<followcalctype>0</followcalctype>
+		<followcommissions>0.00</followcommissions>
+	</contract>
+		
+</xmlRoot>

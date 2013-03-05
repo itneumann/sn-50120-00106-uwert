@@ -1,0 +1,15 @@
+.mooDialogOverlay { position:absolute; top:0; left:0; width:100%; height:100%; margin:auto; background:url(../img/bg_overlay_black.png) 0 0 repeat transparent; z-index:9999; }
+.mooDialogOverlay[id] { position: fixed; }
+
+.mooDialog { position:fixed; top:40%; left:50%; background-color:#fff; solid; z-index:10000; text-shadow:none; }
+.mooDialog .mooDialogTitle { position:relative; padding:5px 25px 5px 10px; color:#fff; font-size:12pt; }
+.mooDialog .mooDialogBody  { padding:20px 10px 10px; color:#000; font-size:16px; line-height:1.1; max-height:500px; overflow:auto; text-align:center; }
+.mooDialog .mooDialogButtons { padding:10px 10px 20px; text-align:center; }
+.mooDialog .mooDialogButtons .mooDialogButton { padding:5px 40px; font-size:13px; font-style:italic; display:inline-block; margin:0 5px; color:#fff; background-color:#000; cursor:pointer; text-decoration:none; }
+.mooDialog .mooDialogButtons .share { padding:5px 20px; }
+
+
+.mooDialog .mooDialogCloser { position:absolute; top:5px; right:5px; height:16px; weigth:16px; background: url(../img/background-icons.png) -100px -20px no-repeat transparent; cursor:pointer; }
+
+.mooDialog .mooDialogButton,
+.mooDialog {-webkit-border-radius:13px; -moz-border-radius:13px; border-radius:13px;}

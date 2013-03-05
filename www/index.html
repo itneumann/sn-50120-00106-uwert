@@ -1,107 +1,67 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="de">
 
 <head>
-	<title>U-Wert-Quick</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta charset="utf-8" />
+	<title>Provisions-Rechner</title>
+
+	<meta name="description" content="Haben Sie sich auch schon einmal gefragt, ob Ihr mühevoll gespartes Geld auch wirklich komplett in dem von Ihrer Hausbank angepriesenen Fonds landet? Oder welche Provision Ihr Versicherungsmakler für die Vermittlung einer Rentenversicherung erhält?" />
+	<meta name="keywords" content="gespartes,Geld,Hausbank,Fonds,Provision,Versicherungsmakler,Vermittlung,Rentenversicherung" />
+
+
+	<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 
 	<script type="text/javascript" src="phonegap.js"></script>
-	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		var appPath="pages/",
+			assetsPath="assets/",
+			fbAppID="",
+			fbAppPage="",
+			fbAppImg="",
+			fbFanPage="";
+	</script>
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.custom.css" />
-	<link rel="stylesheet" type="text/css" href="css/screen.css" />
+	<script type="text/javascript" src="assets/js/api.plugins.js"></script>
+	<script type="text/javascript" src="assets/js/api.app.js"></script>
+
+		<style type="text/css">
+			#appBody { background: #F2F2F2; }
+			FORM BUTTON SPAN { background-color:#B0022F; }
+			.mooDialog .mooDialogButtons .mooDialogButton  { background-color:#B0022F; }
+			.user-bg { background-color:#B0022F; }
+			#appNav LI.activ { background-color:#B0022F; }
+			#appCalc #appResult { border-color:#B0022F; }
+			.user-fg { color:#B0022F; }
+			#appCall #appHead .back { border-right:1px #B0022F solid; }
+			#appCall #appHead .back A { color:#B0022F; }
+		</style>
 
 </head>
 
-<body>
+<body id="vdhApp" >
+	<div id="fb-root"></div>
 
-	<div id="wrapper">
+	<div id="wrapper" data-funct="loadPages">
+		<div id="appBody">
+			<div id="appCalc" class="hide"></div>
+			<div id="appCall" class="hide"></div>
+			<div id="appImprint" class="hide"></div>
+		</div>
 
-			<div class="page page00" data-cpage="page00" data-role="page" data-theme="a">
-				<div class="header">
-					<h1>Start</h1>
-				</div>
+		<nav id="appNav">
+			<ul data-funct="initAppMenu">
+				<li ><a href="calc.html" target="_self" class="calc" data-page="appCalc">Rechner</a></li>
+			</ul>
+		</nav>
 
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.
-					</p>
-				</div>
-			</div>
-
-			<div class="page page01" data-cpage="page01" data-role="page" data-theme="a">
-				<div class="header">
-					<h1>Bauteil</h1>
-				</div>
-
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.
-					</p>
-				</div>
-			</div>
-
-			<div class="page page02" data-cpage="page02" data-role="page" data-theme="a">
-				<div class="header">
-					<h1>Material</h1>
-				</div>
-
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.
-					</p>
-				</div>
-			</div>
-
-			<div class="page page03" data-cpage="page03" data-role="page" data-theme="a">
-				<div class="header">
-					<h1>Konstruktion</h1>
-				</div>
-
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.
-					</p>
-				</div>
-			</div>
-
-			<div class="page page04" data-cpage="page04" data-role="page" data-theme="a">
-				<div class="header">
-					<h1>Vorgaben</h1>
-				</div>
-
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-						Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient montes,
-						nascetur ridiculus mus.
-					</p>
-
-					<button type="button" class="send">E-Mail senden</button>
-				</div>
-			</div>
-
-
-		<div class="uwert">U &asymp; 0,13 W/(m&sup2;K)</div>
+		<!--
+		<div id="appIntro">
+			<noscript id="appInfo" class="roundBorder10">
+				<div class="head">!!! JavaScript Fehler !!!</div>
+				<div class="text">Bitte aktivieren Sie JavaScript in Ihrem Browser,<br/>um diese Anwendung nutzen zu k&ouml;nnem.</div>
+			</noscript>
+		</div>
+		-->
 
 	</div>
 
