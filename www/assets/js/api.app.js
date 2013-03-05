@@ -13,7 +13,7 @@ var api = {
 	showInfo: function(node,opt) {
 		node.addEvent('click', function(evt) {
 			evt.preventDefault();
-			if(typeof mooDialog != 'undefined'){
+			if(typeof(mooDialog) != 'undefined'){
 				api.Dialog = new mooDialog("alert", {Text: opt.text, Closer:false});
 			} else {
 				alert(opt.text);
@@ -59,7 +59,7 @@ var api = {
 					if(api.debug == 2) console.log("Page "+ page.name +" must not Loadetset");
 					api.Pages.after(idx, page, false);
 					return;
-				};
+				}
 
 				if(api.debug) console.log("Load Page "+ page.node +" Server");
 
@@ -203,14 +203,17 @@ var api = {
 				alert(opt.failmsg);
 				node.getElement('button span').removeClass('loading');
 				return false;
-			};
+			}
 
 			if(api.debug) console.log("Load data/contracts.xml and search contract data for "+ cId);
 
 			new Request({
 				url: 'data/contracts.xml',
-				onSuccess: function(data, xmlData){
+				headers: {'X-Request': 'XML'},
+				onSuccess: function(data, responseXML){
 					if(api.debug) console.log("Load data/contracts.xml Success");
+					var xmlData = responseXML.documentElement;
+					if (xmlData.xml) xmlData = new Element('div', { html: doc.xml }).getFirst();
 
 					var cData = {};
 					xmlData.getElements('contract').each(function(c){
@@ -224,11 +227,11 @@ var api = {
 					});
 
 					cData = api.appCalc.calcProvision(cData);
-					alert(JSON.encode(cData));
 					$('appResult').getElement('.result span').set('html', cData.amount);
 					$('appResult').getElement('.hours span').set('html', cData.hours);
 					node.getElement('button span').removeClass('loading');
 				},
+
 				onError: function() {
 					if(api.debug) console.log("Load data/contracts.xml Fail");
 					node.getElement('button span').removeClass('loading');
@@ -236,7 +239,6 @@ var api = {
 				}
 			}).get();
 		});
-
 	},
 
 	initFormCall: function (node, opt) {
