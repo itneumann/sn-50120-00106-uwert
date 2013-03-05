@@ -6,14 +6,26 @@
     <name>U-Wert-Quick</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
-    </description>
+		Das ideale Werkzeug für Architekten, Ingenieure, Handwerker und Heimwerker: Berechnen Sie mit ISOVER U-Wert-Quick schnell und einfach die erzielbaren Dämmwerte eines beliebigen Haus-Bauteils wie Außenwand, Kellerdecke und Steil- oder Flachdach anhand typischer Bauweisen und -materialien. Mit ISOVER U-Wert-Quick haben Sie stets ein unkompliziertes Werkzeug zur Hand, das mit wenigen, einfachen Eingaben den Wärmedurchgangskoeffizienten berechnet und anzeigt, ob aktuelle Vorgaben (EnEV, Passivhaus-Standard und Multi-Komfort) erfüllt werden.
+		Die Applikation ist selbsterklärend: Wählen Sie das gewünschte Bauteil, die geeigneten Materialstärken aus und mit der Wahl der zur Verfügung stehenden Dämmstoffe von ISOVER können Sie direkt ablesen, welcher U-Wert mit der optimalen Konstruktion erreichbar ist.
+		Weitere Informationen erhalten Sie bei ISOVER Dialog per Telefon +49 (0) 621 / 501 200, Fax +49 (0) 621 / 501 201 oder E-Mail: dialog@isover.de (Hierbei gilt der entsprechende Telefon-Tarif).
+
+		Bitte beachten Sie:
+		ISOVER U-Wert-Quick dient der einfachen U-Wert-Abschätzung und ist nicht geeignet, Nachweise nach EnEV zu erbringen. Diese Nachweise lassen sich mit den Programmen DämmCalc Hochbau 2.0 und EPASS-Helena führen. Diese erhalten Sie unter www.isover.de.
+
+		Nutzungsbedingungen:
+		Die App von ISOVER ist ein Hilfsmittel zur schnellen und einfachen Abschätzung des U-Wertes von Standardbauteilen. Eventuelle Sonderregelungen der EnEV sind nicht Gegenstand der App, wie z.B. geringere Anforderungen an den U-Wert aufgrund.
+	</description>
 
     <author href="http://www.zeigewas.de" email="support@zeigewas.de">
         zeigewas GmbH
     </author>
 
+
+	<preference name="permissions" value="none"/>
     <feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
 
     <preference name="phonegap-version" value="2.1.0" />
     <preference name="orientation"      value="default" />
@@ -40,9 +52,9 @@
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"    gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"    gap:platform="ios" width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios" width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 </widget>

@@ -1,0 +1,26 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, menu, header, footer, hgroup, section, article, nav, figure, figcaption, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0; vertical-align:baseline; background:transparent; }
+header, footer, hgroup, section, article, nav, figure, figcaption { display: block; }
+ol, ul { list-style: none; }
+menu, ul, dir { -moz-padding-start: 0px; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+input[type=text], input[type=password], textarea, select { -webkit-border-radius:0; -moz-border-radius:0; resize: none; outline:none; background:none; }
+:focus { outline: none; }
+
+html, body 				{ height: 100%; width: 100%; font-size:100%; background:#fff; font-family: Verdana, Arial, sans-serif; }
+
+#wrapper				{ position:relative; height:100%; }
+
+
+#header					{ position:relative; height:15%; min-height:5em; }
+#header .row1			{ position:relative; height:20%; background: #0ff; }
+#header .row1 IMG		{ position:absolute; left:0; right:0; top:0; bottom:0; }
+#header .row1 A			{ position:absolute; right:10%; top:0; font-size:0.8em; color:#878787; text-decoration:none; }
+
+#header .row2 			{ position:relative; height:80%; }
+#header .row2 .logo		{ float:left; height:100%; width:35%; }
+#header .row2 .title	{ float:left; height:100%; width:65%; text-align:center; vertical-align:middle;  }
+#content				{ height: 85%; background: #f00; }
