@@ -345,12 +345,12 @@ var api = {
 			var $amount=0, $hours=0, cId = $('data_contract').get('value');
 			//alert($cData);
 			$cData = $cData[cId];
-			$runtime = parseInt($('data_runtime').get('value')),
-			$calctype = $cData.calctype,
-			$payamount = parseInt($('data_amount').get('value')),
-			$paymethod = parseInt($('data_paymethod').get('value')),
-			$commission = parseFloat($cData.commission),
-			$runtimetype = $('data_runtime_type').get('value');
+			var $runtime = parseInt($('data_runtime').get('value')),
+				$calctype = $cData.calctype,
+				$payamount = parseInt($('data_amount').get('value')),
+				$paymethod = parseInt($('data_paymethod').get('value')),
+				$commission = parseFloat($cData.commission),
+				$runtimetype = $('data_runtime_type').get('value');
 
 			if($('data_paymethod').get('value') == '0') { $calctype = '2'; }
 			if($runtimetype == 'm') {
