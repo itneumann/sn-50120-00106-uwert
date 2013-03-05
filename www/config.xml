@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "de.zeigewas.quirin-bank.provisions-rechner"
         version   = "0.0.1">
-    <name>U-Wert Quick</name>
+    <name>Provisionsrechner</name>
 
     <description>
 		Ist die Beratung bei Ihrer Bank wirklich kostenlos?
