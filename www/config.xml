@@ -27,7 +27,7 @@
     <preference name="target-device"    value="tablet" />
     <preference name="fullscreen"       value="false" />
 	<preference name="webviewbounce"    value="false" />
-	<preference name="splash-screen-duration" value="10000" />
+	<preference name="splash-screen-duration" value="3000" />
 	<preference name="exit-on-suspend" value="true" />
 
     <icon src="res/icon/icon.png" />
