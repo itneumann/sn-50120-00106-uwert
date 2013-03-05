@@ -354,10 +354,10 @@ var api = {
 
 			if($('data_paymethod').get('value') == '0') { $calctype = '2'; }
 			if($runtimetype == 'm') {
-				//$paymethod = 1;
 				$runtime = $runtime / 12;
-				$runtimetype == 'j';
+				$runtimetype = 'j';
 			}
+
 			if(api.debug) console.log("Calc "+ $cData.name +" by calctye "+ $calctype);
 			switch ($calctype){
 				case '0': $amount = (($payamount * $paymethod) * $runtime) * ($commission / 100); break;
@@ -365,7 +365,7 @@ var api = {
 				case '2': $amount = $payamount * ($commission / 100); break;
 				case '3': $amount = $payamount * ($commission / 100); break;
 				case '4': $amount = ($payamount * $paymethod) * ($commission / 100); break;
-			};
+			}
 
 			$hours = $amount / 150;
 			if(api.debug) console.log("Calc "+ $cData.name +" by calctye("+ $calctype +") and commission("+ $commission +") = amount("+ $amount +") hours("+ $hours +")");
