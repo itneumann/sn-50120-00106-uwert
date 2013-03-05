@@ -114,9 +114,11 @@ var api = {
 					appPage: $(item.get('data-page')).removeClass('hide'),
 					appMenu: item.getParent('li').addClass('activ')
 				};
+				/*
 				api.currPage.appPage.getElements('.scrollable').each(function(e){
 					e.scroller = new ScrollerBar(e);
 				});
+				*/
 			});
 		});
 	},
@@ -209,6 +211,8 @@ var api = {
 				url: 'data/contracts.xml',
 				onSuccess: function(data, xmlData){
 					if(api.debug) console.log("Load data/contracts.xml Success");
+					alert(data);
+
 					var cData = {};
 					xmlData.getElements('contract').each(function(c){
 						cData[c.getElement('id').get('text')] = {
@@ -226,7 +230,7 @@ var api = {
 					node.getElement('button span').removeClass('loading');
 				},
 				onError: function() {
-					if(api.debug) console.log("Load "+ xmlPath +"contracts.xml Fail");
+					if(api.debug) console.log("Load data/contracts.xml Fail");
 					node.getElement('button span').removeClass('loading');
 					alert(opt.failmsg);
 				}
