@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "de.zeigewas.u-wert-quick"
         version   = "1.1.0">
-    <name>U-Wert-Quick</name>
+    <name>U-Wert Quick</name>
 
     <description>
 		Das ideale Werkzeug für Architekten, Ingenieure, Handwerker und Heimwerker: Berechnen Sie mit ISOVER U-Wert-Quick schnell und einfach die erzielbaren Dämmwerte eines beliebigen Haus-Bauteils wie Außenwand, Kellerdecke und Steil- oder Flachdach anhand typischer Bauweisen und -materialien. Mit ISOVER U-Wert-Quick haben Sie stets ein unkompliziertes Werkzeug zur Hand, das mit wenigen, einfachen Eingaben den Wärmedurchgangskoeffizienten berechnet und anzeigt, ob aktuelle Vorgaben (EnEV, Passivhaus-Standard und Multi-Komfort) erfüllt werden.
