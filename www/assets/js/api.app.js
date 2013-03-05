@@ -1,6 +1,6 @@
 
 var api = {
-	debug: 5,
+	debug: 0,
 	Dialog: null,
 	currPage: false,
 	useLocalStore: false,
@@ -211,7 +211,6 @@ var api = {
 				url: 'data/contracts.xml',
 				onSuccess: function(data, xmlData){
 					if(api.debug) console.log("Load data/contracts.xml Success");
-					alert(data);
 
 					var cData = {};
 					xmlData.getElements('contract').each(function(c){
@@ -225,6 +224,7 @@ var api = {
 					});
 
 					cData = api.appCalc.calcProvision(cData);
+					alert(JSON.encode(cData));
 					$('appResult').getElement('.result span').set('html', cData.amount);
 					$('appResult').getElement('.hours span').set('html', cData.hours);
 					node.getElement('button span').removeClass('loading');
