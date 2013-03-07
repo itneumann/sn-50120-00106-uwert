@@ -15,6 +15,7 @@ Finden Sie es heraus – mit unserem Provisionsrechner.
         zeigewas GmbH
     </author>
 
+	<preference name="phonegap-version" value="2.5.0" />
 	<!--
 	<preference name="permissions" value="none"/>
 	-->
