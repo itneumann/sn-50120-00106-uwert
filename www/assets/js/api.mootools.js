@@ -518,6 +518,20 @@ var api = {
 		}
 	},
 
+	checkConnection: function() {
+		var networkState = navigator.connection.type;
+
+		var states = {};
+		states[Connection.UNKNOWN]  = 'Unknown connection';
+		states[Connection.ETHERNET] = 'Ethernet connection';
+		states[Connection.WIFI]     = 'WiFi connection';
+		states[Connection.CELL_2G]  = 'Cell 2G connection';
+		states[Connection.CELL_3G]  = 'Cell 3G connection';
+		states[Connection.CELL_4G]  = 'Cell 4G connection';
+		states[Connection.NONE]     = 'No network connection';
+
+		alert('Connection type: ' + states[networkState]);
+	},
 	Alert: function(message) { if(typeof mooDialog != 'undefined') api.Dialog = new mooDialog("alert", {Text: message, Closer:false}); else alert(message); }
 };
 
@@ -529,6 +543,11 @@ window.addEvent('domready', function(){
 	api.Pages.init();
 	$$("[data-funct]").each(function(e){api.initFunct(e)});
 });
+
+window.addEvent('deviceready', function(){
+	api.checkConnection();
+});
+
 /*
 window.fbAsyncInit = function()	{
 	FB.Event.subscribe('auth.statusChange', api.facebook.onStatusChange);

@@ -5,7 +5,7 @@
 .mooDialog .mooDialogTitle { position:relative; padding:5px 25px 5px 10px; color:#fff; font-size:12pt; }
 .mooDialog .mooDialogBody  { padding:20px 10px 10px; color:#000; font-size:16px; line-height:1.1; max-height:500px; overflow:auto; text-align:center; }
 .mooDialog .mooDialogButtons { padding:10px 10px 20px; text-align:center; }
-.mooDialog .mooDialogButtons .mooDialogButton { padding:5px 40px; font-size:13px; font-style:italic; display:inline-block; margin:0 5px; color:#fff; background-color:#000; cursor:pointer; text-decoration:none; }
+.mooDialog .mooDialogButtons .mooDialogButton { padding:5px 40px; font-size:13px; font-style:italic; display:inline-block; margin:0 5px; color:#fff; background-color:#B0022F; cursor:pointer; text-decoration:none; }
 .mooDialog .mooDialogButtons .share { padding:5px 20px; }
 
 

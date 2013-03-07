@@ -21,47 +21,27 @@
 			fbFanPage="";
 	</script>
 
-	<script type="text/javascript" src="assets/js/api.plugins.js"></script>
-	<script type="text/javascript" src="assets/js/api.app.js"></script>
-
-		<style type="text/css">
-			#appBody { background: #F2F2F2; }
-			FORM BUTTON SPAN { background-color:#B0022F; }
-			.mooDialog .mooDialogButtons .mooDialogButton  { background-color:#B0022F; }
-			.user-bg { background-color:#B0022F; }
-			#appNav LI.activ { background-color:#B0022F; }
-			#appCalc #appResult { border-color:#B0022F; }
-			.user-fg { color:#B0022F; }
-			#appCall #appHead .back { border-right:1px #B0022F solid; }
-			#appCall #appHead .back A { color:#B0022F; }
-		</style>
-
+	<script type="text/javascript" src="assets/js/api.mootools.plugins.js"></script>
+	<script type="text/javascript" src="assets/js/api.mootools.js"></script>
 </head>
 
-<body id="vdhApp" >
+<body id="vdhApp">
 	<div id="fb-root"></div>
 
 	<div id="wrapper" data-funct="loadPages">
 		<div id="appBody">
 			<div id="appCalc" class="hide"></div>
+			<div id="appHelp" class="hide"></div>
 			<div id="appCall" class="hide"></div>
-			<div id="appImprint" class="hide"></div>
 		</div>
 
 		<nav id="appNav">
 			<ul data-funct="initAppMenu">
-				<li ><a href="calc.html" target="_self" class="calc" data-page="appCalc">Rechner</a></li>
+				<li ><a class="calc" data-page="appCalc"></a></li>
+				<li ><a class="news" data-page="appNews"></a></li>
+				<li ><a class="info" data-page="appInfo"></a></li>
 			</ul>
 		</nav>
-
-		<!--
-		<div id="appIntro">
-			<noscript id="appInfo" class="roundBorder10">
-				<div class="head">!!! JavaScript Fehler !!!</div>
-				<div class="text">Bitte aktivieren Sie JavaScript in Ihrem Browser,<br/>um diese Anwendung nutzen zu k&ouml;nnem.</div>
-			</noscript>
-		</div>
-		-->
 
 	</div>
 

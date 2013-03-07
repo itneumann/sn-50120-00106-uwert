@@ -11,33 +11,41 @@ div.mooForm {
 
 div.mooForm,
 div.mooForm SPAN {
-	background:url(../img/form/sprite.png) 0 0 no-repeat; -webkit-font-smoothing: antialiased;
-	font-family: font-family: OlsenWebPro, serif;
+	display: block;
+	height: 42px;
+	line-height:32px;
+	background:url(../img/form/sprite.png) 0 0 no-repeat;
+	-webkit-font-smoothing: antialiased;
+	font-family: OlsenWebPro, serif;
 	font-size: 13px;
 	font-style: italic;
 	font-weight: normal;
 
+}
+
+div.mooForm TEXTAREA,
+div.mooForm SELECT,
+div.mooForm INPUT {
+	color:#505353;
+	font-size: 13px;
+	font-family: OlsenWebPro, serif;
+	font-style: italic;
+	font-weight: normal;
+	border:none;
+	background: none;
+	outline:0;
 }
 
 .mooForm, .mooForm * {
 	margin: 0;
 	padding: 0;
-}
-
-/* INPUT & TEXTAREA */
-div.mooForm-text INPUT {
-	font-size: 13px;
+	/*
 	font-family: OlsenWebPro, serif;
+	font-size: 13px;
 	font-style: italic;
 	font-weight: normal;
-	xpadding: 3px;
-	color:#505353;
-	border:none;
-	background: none;
-	outline:0;
+	*/
 }
-/* INPUT & TEXTAREA: ende */
-
 
 
 /* ####################################
@@ -51,18 +59,13 @@ div.mooForm-text {
 	display:inline-block;
 	background-position:-490px -95px;
 	width:100%;
-	height:42px;
-	line-height:32px;
-	font-size:13px;
 	position: relative;
 	padding-left:10px;
 	overflow: hidden;
 }
 
 div.mooForm-text SPAN {
-	display: block;
-	height:42px;
-	line-height:32px;
+
 	background-position:right -145px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -70,14 +73,11 @@ div.mooForm-text SPAN {
 }
 
 div.mooForm-text INPUT {
-	xwidth:100%;
 	margin:0 10px 0 10px;
 	display: block;
-	position:absolute; left:0px; top:10px;
-	xheight:28px;
-	border:none;
-	background:none;
-	xbackground:rgba(255,255,0,.5);
+	position:absolute;
+	left:0;
+	top:10px;
 }
 
 div.mooForm-text.mooForm-hover {
@@ -125,9 +125,6 @@ div.mooForm-select {
 	display:inline-block;
 	background-position:-490px -295px;
 	width:100%;
-	height:42px;
-	line-height:32px;
-	font-size:13px;
 	position: relative;
 	padding-left:10px;
 	overflow: hidden;
@@ -135,31 +132,28 @@ div.mooForm-select {
 
 div.mooForm-select SPAN {
 	display:block;
-	background-position:right -345px; height:42px; line-height:42px;
+	background-position:right -345px;
 	overflow: hidden;
 }
 
 div.mooForm-select EM {
 	position:absolute; top:6px; left:11px; right:35px;
 	display:block;
-	font-size:13px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	color:#505353;
 	border:none;
 	background:none;
 	overflow: hidden;
-	line-height:30px;
-	/* text-shadow:0 1px 0 #fff; */
 }
 
 div.mooForm-select .defaultValue {
-	xcolor:#B3B3B3;
 }
 
 div.mooForm-select SELECT {
-	position:absolute; left:5px; right:5px; top:5px;
-	height:32px;
+	position:absolute;
+	left:5px;
+	top:16px;
 	border:none;
 	background:none;
 }
@@ -228,38 +222,38 @@ div.mooForm-checker INPUT {
 }
 
 div.mooForm-checker SPAN {
-	background-position: 0px 0px;
+	background-position: 0 0;
 	height:19px; width:19px;
 }
 
 div.mooForm-checker.mooForm-hover SPAN {
-	background-position:-19px 0px;
+	background-position:-19px 0;
 }
 
 div.mooForm-checker.mooForm-focus SPAN,
 div.mooForm-checker.mooForm-active SPAN {
-	background-position:-19px 0px;
+	background-position:-19px 0;
 }
 
 div.mooForm-checker.mooForm-disabled SPAN {
-  background-position: -57px 0px;
+  background-position: -57px 0;
 }
 
 div.mooForm-checker SPAN.mooForm-checked {
-  background-position: -100px 0px;
+  background-position: -100px 0;
 }
 
 div.mooForm-checker.mooForm-hover SPAN.mooForm-checked {
-	background-position:-100px 0px;
+	background-position:-100px 0;
 }
 
 div.mooForm-checker.mooForm-focus SPAN.mooForm-checked,
 div.mooForm-checker.mooForm-active SPAN.mooForm-checked {
-	background-position:-100px 0px;
+	background-position:-100px 0;
 }
 
 div.mooForm-checker.mooForm-disabled SPAN.mooForm-checked {
-  background-position: -157px 0px;
+  background-position: -157px 0;
 }
 
 
@@ -267,12 +261,12 @@ div.mooForm-checker.mooForm-disabled SPAN.mooForm-checked {
 .mustFill div.mooForm-checker SPAN,
 .mustFill div.mooForm-checker.mooForm-hover SPAN,
 .mustFill div.mooForm-checker.mooForm-focus SPAN,
-.mustFill div.mooForm-checker.mooForm-active SPAN{ background-position: -38px 0px; }
+.mustFill div.mooForm-checker.mooForm-active SPAN{ background-position: -38px 0; }
 
 .mustFill div.mooForm-checker SPAN.mooForm-checked,
 .mustFill div.mooForm-checker.mooForm-hover SPAN.mooForm-checked,
 .mustFill div.mooForm-checker.mooForm-focus SPAN.mooForm-checked,
-.mustFill div.mooForm-checker.mooForm-active SPAN.mooForm-checked { background-position:-138px 0px; }
+.mustFill div.mooForm-checker.mooForm-active SPAN.mooForm-checked { background-position:-138px 0; }
 
 #policy.mustFill .label	{ color:#f00; }
 
@@ -290,7 +284,7 @@ div.mooForm-radio INPUT {
 }
 
 div.mooForm-radio SPAN {
-	background-position: 0px -50px;
+	background-position: 0 -50px;
 	height:19px; width:19px;
 }
 
@@ -333,7 +327,7 @@ div.mooForm-radio.mooForm-disabled SPAN.mooForm-checked {
 /*  Uploader   */
 /*  #########  */
 div.mooForm-uploader {
-  /*  background-position: 0px -297px;*/
+  /*  background-position: 0 -297px;*/
   background:none;
   height: 28px;
 }
@@ -346,16 +340,16 @@ div.mooForm-uploader span.mooForm-action {
 
 div.mooForm-uploader span.mooForm-filename {
 	height: 21px;
-	margin: 2px 0px 2px 2px;
+	margin: 2px 0 2px 2px;
 	line-height: 24px;
 	background:#FFF;
 	background-clip: padding-box;
-	-moz-border-radius: 3px 0px 0px 3px;
-	-webkit-border-radius: 3px 0px 0px 3px;
-	-o-border-radius: 3px 0px 0px 3px;
-	-ms-border-radius: 3px 0px 0px 3px;
-	-khtml-border-radius: 3px 0px 0px 3px;
-	border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px;
+	-khtml-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
 	-moz-box-shadow: inset 1px 2px 2px 0 #cdcdcd;
 	-webkit-box-shadow: inset 1px 2px 2px 0 #cdcdcd;
 	-o-box-shadow: inset 1px 2px 2px 0 #cdcdcd;
@@ -366,7 +360,7 @@ div.mooForm-uploader span.mooForm-filename {
 div.mooForm-uploader.mooForm-focus,
 div.mooForm-uploader.mooForm-hover,
 div.mooForm-uploader:hover {
-	background-position: 0px -353px;
+	background-position: 0 -353px;
 }
 
 div.mooForm-uploader.mooForm-focus span.mooForm-action,
@@ -388,7 +382,7 @@ div.mooForm-uploader:focus:active span.mooForm-action {
 }
 
 div.mooForm-uploader.mooForm-disabled {
-	background-position: 0px -325px;
+	background-position: 0 -325px;
 }
 
 div.mooForm-uploader.mooForm-disabled span.mooForm-action {
@@ -396,7 +390,7 @@ div.mooForm-uploader.mooForm-disabled span.mooForm-action {
 }
 
 div.mooForm-button {
-	background-position: 0px -523px;
+	background-position: 0 -523px;
 }
 
 div.mooForm-button span {
@@ -407,7 +401,7 @@ div.mooForm-button.mooForm-focus,
 div.mooForm-button:focus,
 div.mooForm-button:hover,
 div.mooForm-button.mooForm-hover {
-	background-position: 0px -553px;
+	background-position: 0 -553px;
 }
 
 div.mooForm-button.mooForm-focus span,
@@ -419,7 +413,7 @@ div.mooForm-button.mooForm-hover span {
 
 div.mooForm-button.mooForm-active,
 div.mooForm-button:active {
-	background-position: 0px -583px;
+	background-position: 0 -583px;
 }
 
 div.mooForm-button.mooForm-active span,
@@ -430,7 +424,7 @@ div.mooForm-button:active span {
 
 div.mooForm-button.mooForm-disabled,
 div.mooForm-button:disabled {
-  background-position: 0px -613px;
+  background-position: 0 -613px;
 }
 
 div.mooForm-button.mooForm-disabled span,
@@ -474,7 +468,7 @@ div.mooForm-uploader {
 div.mooForm-uploader span.mooForm-action {
   width: 85px;
   text-align: center;
-  text-shadow: #fff 0px 1px 0px;
+  text-shadow: #fff 0 1px 0;
   font-size: 11px;
   font-weight: bold;
 }
@@ -591,14 +585,14 @@ div.mooForm-uploader {
 div.mooForm-uploader span.mooForm-action {
   float: left;
   display: inline;
-  padding: 2px 0px;
+  padding: 2px 0;
   padding-top:3px;
   overflow: hidden;
   cursor: pointer;
 }
 
 div.mooForm-uploader span.mooForm-filename {
-  padding: 0px 10px;
+  padding: 0 10px;
   padding-top:2px;
   float: left;
   display: block;
