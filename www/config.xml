@@ -25,7 +25,7 @@ Finden Sie es heraus – mit unserem Provisionsrechner.
 
     <preference name="phonegap-version" value="2.1.0" />
 	<preference name="orientation" value="portrait" />
-    <preference name="target-device"    value="tablet" />
+    <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
 	<preference name="webviewbounce"    value="false" />
 	<preference name="splash-screen-duration" value="3000" />
