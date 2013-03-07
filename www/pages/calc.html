@@ -3,109 +3,113 @@
 		<h1>Provisionsrechner</h1>
 	</div>
 
-	<form method="post" name="ajaxFormCalc" id="ajaxFormCalc" data-funct="initFormCalc" data-opts="norel:'Nicht relevant',failmsg:'Bitte überprüfen Sie Ihre Daten, es müssen alle möglichen Felder ausgefüllt werden.'">
-		<fieldset>
+	<div class="inner">
 
-			<div class="info">Bitte geben Sie die entsprechenden Werte Ihres Vertrages in die jeweiligen Felder ein:</div>
+		<form method="post" name="ajaxFormCalc" id="ajaxFormCalc" data-funct="initFormCalc" data-opts="norel:'Nicht relevant',failmsg:'Bitte überprüfen Sie Ihre Daten, es müssen alle möglichen Felder ausgefüllt werden.'">
+			<fieldset>
 
-			<div class="item">
-				<div class="label">Vertragsart</div>
-				<div class="value">
-					<select class="inputSelect" name="data[contract]" id="data_contract">
-						<option selected="selected" value="">Bitte wählen</option>
-						<option data-opt="type:0, comm:5.00" value="13324000000026">Aktienfonds-Sparplan</option>
-						<option data-opt="type:2, comm:5.00" value="13324000000001">Aktiv gemanagte Aktienfonds</option>
-						<option data-opt="type:2, comm:3.00" value="13324000000000">Aktiv gemanagte Rentenfonds</option>
-						<option data-opt="type:3, comm:1.25" value="13324000000002">Baufinanzierungen</option>
-						<option data-opt="type:3, comm:1.60" value="13324000000003">Bausparvertrag</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000004">Berufsunfähigkeitsversicherung</option>
-						<option data-opt="type:2, comm:5.00" value="13324000000025">Dachfonds</option>
-						<option data-opt="type:0, comm:5.00" value="13324000000028">Dachfonds-Sparplan</option>
-						<option data-opt="type:2, comm:0.25" value="13324000000005">Festgeld</option>
-						<option data-opt="type:2, comm:9.00" value="13324000000006">Flugzeugbeteiligungen</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000007">Fondsgebundene Lebensversicherung</option>
-						<option data-opt="type:0, comm:4.50" value="13324000000008">Fondsgebundene Rentenversicherungsicherung</option>
-						<option data-opt="type:2, comm:2.00" value="13324000000009">Geldmarktfonds</option>
-						<option data-opt="type:2, comm:12.00" value="13324000000010">Geschlossene Immobilienfonds</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000011">Kapitallebensversicherung</option>
-						<option data-opt="type:4, comm:8.00" value="13324000000012">Kraftfahrzeugversicherung</option>
-						<option data-opt="type:2, comm:8.00" value="13324000000013">Medienfonds</option>
-						<option data-opt="type:2, comm:5.00" value="13324000000014">Mischfonds</option>
-						<option data-opt="type:0, comm:5.00" value="13324000000029">Mischfonds (Sparplan)</option>
-						<option data-opt="type:2, comm:4.00" value="13324000000015">Offene Immobilienfonds</option>
-						<option data-opt="type:0, comm:5.00" value="13324000000030">Offene Immobilienfonds (Sparplan)</option>
-						<option data-opt="type:2, comm:8.50" value="13324000000016">Private Equity-Fonds</option>
-						<option data-opt="type:1, comm:7.50" value="13324000000017">Private Krankenvollversicherung</option>
-						<option data-opt="type:1, comm:7.50" value="13324000000018">Private Krankenzusatzversicherung</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000019">Private Rentenversicherung</option>
-						<option data-opt="type:4, comm:25.00" value="13324000000020">Private Sachversicherungen</option>
-						<option data-opt="type:0, comm:3.00" value="13324000000027">Rentenfonds-Sparplan</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000021">Riester Rentenversicherung</option>
-						<option data-opt="type:0, comm:4.00" value="13324000000022">Risikolebensversicherung</option>
-						<option data-opt="type:0, comm:4.25" value="13324000000023">Rürüp Rentenversicherung</option>
-						<option data-opt="type:2, comm:12.00" value="13324000000024">Schiffsbeteiligungen</option>
-					</select>
-				</div>
-				<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Vertragsart&lt;/strong&gt;\n\nBitte wählen Sie die Art des Vertrages aus\n (z.B. Fondssparplan, Rentenversicherung, etc.).'" />
-			</div>
+				<div class="info">Bitte geben Sie die entsprechenden Werte Ihres Vertrages in die jeweiligen Felder ein:</div>
 
-			<div class="item">
-				<div class="label">Betrag</div>
-				<div class="value"><input type="text" name="data[amount]" id="data_amount" value="" maxlength="7" autocomplete="off" class="inputText" style="width:100px;" /> &nbsp; EUR</div>
-				<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Betrag&lt;/strong&gt;\n\nBitte geben Sie den Zahlbetrag in\n vollen Euro (ohne Cent betrag) ein.'" />
-			</div>
-
-			<div class="item">
-				<div class="label">Zahlweise</div>
-				<div class="value">
-					<select class="inputSelect" name="data[paymethod]" id="data_paymethod" disabled="disabled">
-						<option selected="selected" value="">Bitte wählen</option>
-						<option value="12">Monatlich</option>
-						<option value="4">Vierteljährlich</option>
-						<option value="2">Halbjährlich</option>
-						<option value="1">Jährlich</option>
-						<option value="0">Einmalig</option>
-					</select>
-				</div>
-				<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Zahlweise&lt;/strong&gt;\n\nBitte wählen Sie die Zahlweise des ausgewählten Vertrages aus (z.B. monatlich, jährlich, etc.).'" />
-			</div>
-
-			<div class="item">
-				<div class="label">Laufzeit</div>
-				<div class="value">
-					<input type="text" id="data_runtime" name="data[runtime]" value="{$post.runtime}" class="inputText" autocomplete="off" maxlength="2" style="width:40px;"/>
-					<div style="position:absolute; top:0; left:50px; right:0;">
-						<select class="inputSelect" name="data[runtime_type]" id="data_runtime_type" disabled="disabled">
+				<div class="item">
+					<div class="label">Vertragsart</div>
+					<div class="value">
+						<select class="inputSelect" name="data[contract]" id="data_contract">
 							<option selected="selected" value="">Bitte wählen</option>
-							<option value="j">Jahre</option>
-							<option value="m">Monate</option>
+							<option data-opt="type:0, comm:5.00" value="13324000000026">Aktienfonds-Sparplan</option>
+							<option data-opt="type:2, comm:5.00" value="13324000000001">Aktiv gemanagte Aktienfonds</option>
+							<option data-opt="type:2, comm:3.00" value="13324000000000">Aktiv gemanagte Rentenfonds</option>
+							<option data-opt="type:3, comm:1.25" value="13324000000002">Baufinanzierungen</option>
+							<option data-opt="type:3, comm:1.60" value="13324000000003">Bausparvertrag</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000004">Berufsunfähigkeitsversicherung</option>
+							<option data-opt="type:2, comm:5.00" value="13324000000025">Dachfonds</option>
+							<option data-opt="type:0, comm:5.00" value="13324000000028">Dachfonds-Sparplan</option>
+							<option data-opt="type:2, comm:0.25" value="13324000000005">Festgeld</option>
+							<option data-opt="type:2, comm:9.00" value="13324000000006">Flugzeugbeteiligungen</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000007">Fondsgebundene Lebensversicherung</option>
+							<option data-opt="type:0, comm:4.50" value="13324000000008">Fondsgebundene Rentenversicherungsicherung</option>
+							<option data-opt="type:2, comm:2.00" value="13324000000009">Geldmarktfonds</option>
+							<option data-opt="type:2, comm:12.00" value="13324000000010">Geschlossene Immobilienfonds</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000011">Kapitallebensversicherung</option>
+							<option data-opt="type:4, comm:8.00" value="13324000000012">Kraftfahrzeugversicherung</option>
+							<option data-opt="type:2, comm:8.00" value="13324000000013">Medienfonds</option>
+							<option data-opt="type:2, comm:5.00" value="13324000000014">Mischfonds</option>
+							<option data-opt="type:0, comm:5.00" value="13324000000029">Mischfonds (Sparplan)</option>
+							<option data-opt="type:2, comm:4.00" value="13324000000015">Offene Immobilienfonds</option>
+							<option data-opt="type:0, comm:5.00" value="13324000000030">Offene Immobilienfonds (Sparplan)</option>
+							<option data-opt="type:2, comm:8.50" value="13324000000016">Private Equity-Fonds</option>
+							<option data-opt="type:1, comm:7.50" value="13324000000017">Private Krankenvollversicherung</option>
+							<option data-opt="type:1, comm:7.50" value="13324000000018">Private Krankenzusatzversicherung</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000019">Private Rentenversicherung</option>
+							<option data-opt="type:4, comm:25.00" value="13324000000020">Private Sachversicherungen</option>
+							<option data-opt="type:0, comm:3.00" value="13324000000027">Rentenfonds-Sparplan</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000021">Riester Rentenversicherung</option>
+							<option data-opt="type:0, comm:4.00" value="13324000000022">Risikolebensversicherung</option>
+							<option data-opt="type:0, comm:4.25" value="13324000000023">Rürüp Rentenversicherung</option>
+							<option data-opt="type:2, comm:12.00" value="13324000000024">Schiffsbeteiligungen</option>
 						</select>
 					</div>
+					<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Vertragsart&lt;/strong&gt;\n\nBitte wählen Sie die Art des Vertrages aus\n (z.B. Fondssparplan, Rentenversicherung, etc.).'" />
 				</div>
-				<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Laufzeit&lt;/strong&gt;\n\nBitte geben Sie die Laufzeit des\nVertrages in Monaten/Jahren an.'" />
+
+				<div class="item">
+					<div class="label">Betrag</div>
+					<div class="value"><input type="text" name="data[amount]" id="data_amount" value="" maxlength="7" autocomplete="off" class="inputText" style="width:100px;" /> &nbsp; EUR</div>
+					<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Betrag&lt;/strong&gt;\n\nBitte geben Sie den Zahlbetrag in\n vollen Euro (ohne Cent betrag) ein.'" />
+				</div>
+
+				<div class="item">
+					<div class="label">Zahlweise</div>
+					<div class="value">
+						<select class="inputSelect" name="data[paymethod]" id="data_paymethod" disabled="disabled">
+							<option selected="selected" value="">Bitte wählen</option>
+							<option value="12">Monatlich</option>
+							<option value="4">Vierteljährlich</option>
+							<option value="2">Halbjährlich</option>
+							<option value="1">Jährlich</option>
+							<option value="0">Einmalig</option>
+						</select>
+					</div>
+					<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Zahlweise&lt;/strong&gt;\n\nBitte wählen Sie die Zahlweise des ausgewählten Vertrages aus (z.B. monatlich, jährlich, etc.).'" />
+				</div>
+
+				<div class="item">
+					<div class="label">Laufzeit</div>
+					<div class="value">
+						<input type="text" id="data_runtime" name="data[runtime]" value="{$post.runtime}" class="inputText" autocomplete="off" maxlength="2" style="width:40px;"/>
+						<div style="position:absolute; top:0; left:50px; right:0;">
+							<select class="inputSelect" name="data[runtime_type]" id="data_runtime_type" disabled="disabled">
+								<option selected="selected" value="">Bitte wählen</option>
+								<option value="j">Jahre</option>
+								<option value="m">Monate</option>
+							</select>
+						</div>
+					</div>
+					<img src="assets/img/infoBtn.png" height="20" width="20" data-funct="showInfo" data-opts="text:'&lt;strong&gt;Laufzeit&lt;/strong&gt;\n\nBitte geben Sie die Laufzeit des\nVertrages in Monaten/Jahren an.'" />
+				</div>
+			</fieldset>
+
+			<div class="btn">
+				<button type="submit"><span class="roundBorder10">Provision berechnen</span></button>
 			</div>
-		</fieldset>
+		</form>
 
-		<div class="btn">
-			<button type="submit"><span class="roundBorder10">Provision berechnen</span></button>
+		<div id="appResult">
+			<div class="result user-fg"><span>0,00</span> &euro;</div>
+			<div class="hours user-fg">= ca. <span>0</span> Std. neutraler Honorarbetrag</div>
 		</div>
-	</form>
 
-	<div id="appResult">
-		<div class="result user-fg"><span>0,00</span> &euro;</div>
-		<div class="hours user-fg">= ca. <span>0</span> Std. neutraler Honorarbetrag</div>
-	</div>
+		<!--
+		<div id="appLinks" data-funct="calcLinks" data-opts="shareTitle:'{#info_title_social_share#}', shareText:'{#info_text_social_share#}', shareAltText:'{#info_alttext_social_share#}', twShareText:'{#share_text_txitter#}', twShareUrl:'{$conf.twTinyUrl}'">
+			{if $client.rights.cons_request}<a href="{$appPath}call.html" class="link ajax request roundBorder10">{#button_consultant_request#}</a>{/if}
+			{if $client.rights.social_share}<a href="{$appPath}share.html" class="link ajax share roundBorder10">{#button_social_share#}</a>{/if}
+			{if $client.rights.order_ebook}<a href="{$client.rights.link_ebook}" class="link roundBorder10" target="_blank">{#button_order_ebook#}</a>{/if}
+		</div>
+		-->
 
-	<!--
-	<div id="appLinks" data-funct="calcLinks" data-opts="shareTitle:'{#info_title_social_share#}', shareText:'{#info_text_social_share#}', shareAltText:'{#info_alttext_social_share#}', twShareText:'{#share_text_txitter#}', twShareUrl:'{$conf.twTinyUrl}'">
-		{if $client.rights.cons_request}<a href="{$appPath}call.html" class="link ajax request roundBorder10">{#button_consultant_request#}</a>{/if}
-		{if $client.rights.social_share}<a href="{$appPath}share.html" class="link ajax share roundBorder10">{#button_social_share#}</a>{/if}
-		{if $client.rights.order_ebook}<a href="{$client.rights.link_ebook}" class="link roundBorder10" target="_blank">{#button_order_ebook#}</a>{/if}
-	</div>
-	-->
+		<div id="appInfo">
+			<div class="head">Ergebnis*</div>
+			<div class="text">Das ist die nach allgemeinen Durchschnittswerten berechnete Provision, die Ihr Berater bei Abschluss des Vertrages erhält. Für diesen Betrag können Sie sich .... (Formel: Ergebnis / 150 =) Stunden neutrale Beratung bei einem Berater Ihrer Wahl leisten. Für den Stundensatz Honorarberatung wurde ebenfalls ein Durchschnittswert gewählt.</div>
+			<div class="info">(* Werte können abweichen</div>
+		</div>
 
-	<div id="appInfo">
-		<div class="head">Ergebnis*</div>
-		<div class="text">Das ist die nach allgemeinen Durchschnittswerten berechnete Provision, die Ihr Berater bei Abschluss des Vertrages erhält. Für diesen Betrag können Sie sich .... (Formel: Ergebnis / 150 =) Stunden neutrale Beratung bei einem Berater Ihrer Wahl leisten. Für den Stundensatz Honorarberatung wurde ebenfalls ein Durchschnittswert gewählt.</div>
-		<div class="info">(* Werte können abweichen</div>
 	</div>

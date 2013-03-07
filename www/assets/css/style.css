@@ -57,8 +57,11 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 
 /* Layout App Rechner Form */
 #appCalc						{ position:absolute; top:0; left:0; width:100%; height:100%; }
+#appCalc .inner					{ position:absolute; top:50%; left:0; margin-top:-380px; width:100%; height:760px; }
+
 #appCalc FORM					{ position:absolute; top:40px; left:5%; right:5%; display:block; }
 #appCalc FIELDSET				{ padding:10px; margin-bottom:20px; }
+
 
 #appCalc FORM .info				{ color:#575C73; margin-bottom:20px; font-size:13px; text-align:center; }
 #appCalc FORM .item				{ width:100%; height:42px; margin:0 0 5px 0; }
@@ -90,7 +93,9 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 #appCall					{ position:absolute; top:0; left:0; width:520px; height:647px; background:rgba(255,255,255,0.75); }
 #appCall #appHead .back		{ position:absolute; top:0; left:0; width:70px; height:32px; border-right:1px #B0022F solid; text-align:center; }
 #appCall #appHead .back A	{ color:#B0022F; font-size:12px; line-height:32px; text-decoration:none;  }
+
 #appCall FORM				{ padding:20px; }
+
 #appCall .info				{ color:#666; margin-bottom:20px; font-size:12px; }
 #appCall .item				{ width:480px; height:30px; margin:0 5px 0 0; }
 #appCall .label				{ float:left; width:120px; height:20px; font-size:13px; line-height:20px; font-weight:bold; }
@@ -174,7 +179,7 @@ FORM SELECT OPTION { background:#fff; font-family:OlsenWebPro,serif; font-size:1
 
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 760px) {
 	body						{ font-size:12px; }
 
 	#appCalc FORM .info			{ font-size:11px; }
