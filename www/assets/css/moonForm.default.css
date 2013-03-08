@@ -26,7 +26,10 @@ div.mooForm SPAN {
 div.mooForm TEXTAREA,
 div.mooForm SELECT,
 div.mooForm INPUT {
-	color:#505353;
+	height:32px;
+	line-height:32px;
+	top: 0;
+	color: #505353;
 	font-size: 13px;
 	font-family: OlsenWebPro, serif;
 	font-style: italic;
@@ -77,7 +80,6 @@ div.mooForm-text INPUT {
 	display: block;
 	position:absolute;
 	left:0;
-	top:10px;
 }
 
 div.mooForm-text.mooForm-hover {
@@ -124,7 +126,6 @@ div.mooForm-select {
 	position:relative;
 	display:inline-block;
 	background-position:-490px -295px;
-	width:100%;
 	position: relative;
 	padding-left:10px;
 	overflow: hidden;
@@ -137,7 +138,10 @@ div.mooForm-select SPAN {
 }
 
 div.mooForm-select EM {
-	position:absolute; top:6px; left:11px; right:35px;
+	position:absolute;
+	top:4px;
+	left:11px;
+	right:35px;
 	display:block;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -153,7 +157,6 @@ div.mooForm-select .defaultValue {
 div.mooForm-select SELECT {
 	position:absolute;
 	left:5px;
-	top:16px;
 	border:none;
 	background:none;
 }

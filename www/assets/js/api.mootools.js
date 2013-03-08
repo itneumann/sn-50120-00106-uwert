@@ -41,12 +41,9 @@ var api = {
 	Pages: {
 		ready: false,
 		apps: [
-			{ name: 'calc', node: 'appCalc', load:false}
-			/*
-			{ name: 'call', node: 'appCall', load:false},
-			{ name: 'imprint', node: 'appImprint', load:false},
-			{ name: 'news', node: 'appNews', load:false}
-			*/
+			{ name: 'calc', node: 'appCalc', load:false},
+			{ name: 'news', node: 'appNews', load:false},
+			{ name: 'info', node: 'appInfo', load:false}
 		],
 
 		init: function() {
@@ -106,19 +103,17 @@ var api = {
 			item.addEvent('click', function(evt) {
 				if(evt) evt.preventDefault();
 				if(api.views.appCall) $('appCall').addClass('hide');
+
 				if(api.currPage) {
 					api.currPage.appPage.addClass('hide');
 					api.currPage.appMenu.removeClass('activ');
 				}
+				console.log(item.get('data-page'));
+				console.log($(item.get('data-page')).get('html'));
 				api.currPage = {
 					appPage: $(item.get('data-page')).removeClass('hide'),
 					appMenu: item.getParent('li').addClass('activ')
 				};
-				/*
-				api.currPage.appPage.getElements('.scrollable').each(function(e){
-					e.scroller = new ScrollerBar(e);
-				});
-				*/
 			});
 		});
 	},
@@ -227,8 +222,8 @@ var api = {
 					});
 
 					cData = api.appCalc.calcProvision(cData);
-					$('appResult').getElement('.result span').set('html', cData.amount);
-					$('appResult').getElement('.hours span').set('html', cData.hours);
+					$('appCalc').getElement('.calcResult .result span').set('html', cData.amount);
+					$('appCalc').getElement('.calcResult .hours span').set('html', cData.hours);
 					node.getElement('button span').removeClass('loading');
 				},
 
@@ -323,25 +318,6 @@ var api = {
 		}
 	},
 
-	initDatePicker: function(elm, opts) {
-		if(typeof mooDatePicker == 'undefined') return;
-		var pBtn = elm.getElement(opts.btn);
-		if(pBtn) pBtn.setStyle('display', 'block');
-
-		var dOpts = {
-			pickerClass: 'datepicker_vista',
-			allowEmpty: opts.allowEmpty || true,
-			toggleElements: opts.btn || null,
-			timePicker: opts.time || false,
-			timePickerOnly: opts.timeonly || false,
-			format: opts.format || 'd.m.Y'+ (opts.time ? ' H:i' : ''),
-			days: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-			months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-			inputOutputFormat: "Y-d-m H:i"
-		};
-		new mooDatePicker(elm, dOpts);
-	},
-
 	appCalc: {
 		calcProvision: function($cData) {
 			var $amount=0, $hours=0, cId = $('data_contract').get('value');
@@ -430,6 +406,7 @@ var api = {
 	},
 
 	newsInit: function(e, o) { api.appNews.init(); },
+
 	calcLinks:  function(e, o) { api.appCalc.initLinks(e, o); },
 
 
@@ -542,11 +519,10 @@ window.addEvent('domready', function(){
 	//$('appIntro').setStyle('display', 'block');
 	api.Pages.init();
 	$$("[data-funct]").each(function(e){api.initFunct(e)});
+
+	document.addEventListener("deviceready", api.checkConnection, true);
 });
 
-window.addEvent('deviceready', function(){
-	api.checkConnection();
-});
 
 /*
 window.fbAsyncInit = function()	{

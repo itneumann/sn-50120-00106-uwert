@@ -13,6 +13,7 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 #wrapper 				{ position:relative; width:100%; height:100%; margin:0 auto; background:#000;}
 
 #appBody				{ position:relative; height:100%; width:100%; background: #F2F2F2; }
+#appBody > .item		{ position:absolute; top:0; left:0; width:100%; height:100%; }
 
 #appNav					{ display:block; position:absolute; left:0; bottom:0; height:49px; width:100%; background:url("../img/navBg.gif") 0 0 repeat-x; text-align:center; }
 #appNav UL				{ position:absolute; display:block; width:360px; height:48px; top:0; left:50%; margin-left:-180px; }
@@ -34,22 +35,15 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 
 
 
-/* Layout App News */
-#appNews								{ position:absolute; top:0; left:0; width:520px; height:647px; background:rgba(255,255,255,0.75); }
+/* Layout App News and Info */
+SECTION.list							{ position:absolute; top:32px; left:0; bottom:49px; width:100%; overflow-y:auto; }
+SECTION.list ARTICLE					{ display:block; padding:30px 0; width:35%; border-bottom:1px #000 solid; overflow-y:hidden; }
+SECTION.list ARTICLE .head				{ padding:0 25px 0 10px; min-height:19px; background:url("../img/icon_spirte.png") 100% -250px no-repeat; }
 
-#appNews .list							{ position:relative; /*absolute; top:30px; left:5px; width:200px;*/ height:605px; overflow:hidden; }
-#appNews .list .scrollables				{ position:relative; height:605px; overflow-y:auto; overflow-x:hidden; border-right:1px #333 solid; }
-
-#appNews .list ARTICLE					{ position:relative; display:block; width:487px; margin:10px; border-bottom:1px #000 solid; }
-#appNews .list ARTICLE .head			{ padding-bottom:5px; }
-#appNews .list ARTICLE .toggle			{ position:absolute; top:10px; right:10px; bottom:auto; display:block; width:23px; height:16px; background:url(../img/icon_spirte.png) 0 40px no-repeat; }
-#appNews .list ARTICLE.close .toggle	{ top:0; bottom:auto; background-position:0 -150px; }
-#appNews .list ARTICLE.open  .toggle	{ top:auto; bottom:10px; background-position:-50px -150px; }
-
-#appNews .list .date					{ float:left; width:70px; margin-right:10px; padding-left:10px; font-size:14px; color:#000; }
-#appNews .list .title					{ float:left; width:350px; font-size:14px; color:#000; font-weight:bold; }
-#appNews .list .details					{ height:0; overflow:hidden; }
-#appNews .list .content					{ padding:10px 10px 15px; font-size:12px; color:#000; }
+SECTION.list ARTICLE .detail			{ display:none; position:absolute; top:0; bottom:0; left:35%; width:65%; background:#ff0; }
+SECTION.list ARTICLE .detail .content	{ padding:20px; }
+SECTION.list ARTICLE.active				{ background:#ccc; }
+SECTION.list ARTICLE.active .detail		{ display:block; }
 
 
 
@@ -73,18 +67,18 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 #appCalc FORM .btn SPAN			{ font-size:13px; }
 
 
-#appCalc #appResult				{ position:absolute; top:50%; left:0; width:100%; height:119px; border-top:3px #B0022F solid; border-bottom:3px #B0022F solid; }
-#appCalc #appResult .result		{ padding-top:10px; font-size:40px; line-height:70px; text-align:center; font-weight:bold; letter-spacing:2px; }
-#appCalc #appResult	.hours		{ padding-top:0; font-size:18px; line-height:30px; text-align:center; font-weight:bold;}
+#appCalc .calcResult			{ position:absolute; top:50%; left:0; width:100%; height:119px; border-top:3px #B0022F solid; border-bottom:3px #B0022F solid; }
+#appCalc .calcResult .result	{ padding-top:10px; font-size:40px; line-height:70px; text-align:center; font-weight:bold; letter-spacing:2px; }
+#appCalc .calcResult .hours		{ padding-top:0; font-size:18px; line-height:30px; text-align:center; font-weight:bold;}
 
-#appCalc #appLinks				{ position:absolute; top:475px; left:0; width:520px; text-align:center; }
-#appCalc #appLinks .link		{ display:inline-block; width:155px; padding:0; margin:0 6px; color:#fff; background:#000; font-size:12px; line-height:29px; text-decoration:none; }
-#appCalc #appLinks .disabled	{ color:#ccc; background:#666; cursor:default; }
+#appCalc .links					{ position:absolute; top:475px; left:0; width:520px; text-align:center; }
+#appCalc .links .link			{ display:inline-block; width:155px; padding:0; margin:0 6px; color:#fff; background:#000; font-size:12px; line-height:29px; text-decoration:none; }
+#appCalc .links .disabled		{ color:#ccc; background:#666; cursor:default; }
 
-#appCalc #appInfo				{ position:absolute; bottom:60px; left:5%; right:5%; color:#000; }
-#appCalc #appInfo .head			{ color:#000; font-size:11px; font-weight:bold; padding:10px 10px 0; }
-#appCalc #appInfo .text			{ color:#000; font-size:11px; padding:0 10px 5px; }
-#appCalc #appInfo .info			{ color:#000; font-size:11px; padding:0 10px 10px; text-align:right; }
+#appCalc .calcInfo				{ position:absolute; bottom:60px; left:5%; right:5%; color:#000; }
+#appCalc .calcInfo .head		{ color:#000; font-size:11px; font-weight:bold; padding:10px 10px 0; }
+#appCalc .calcInfo .text		{ color:#000; font-size:11px; padding:0 10px 5px; }
+#appCalc .calcInfo .info		{ color:#000; font-size:11px; padding:0 10px 10px; text-align:right; }
 
 
 
@@ -121,22 +115,6 @@ body					{ margin:0; padding:0; color:#505353; font-family:OlsenWebPro, Arial, H
 
 
 
-/* Layout App Intro */
-#appIntro					{ display:block; position:absolute; top:0; left:0; width:520px; height:688px; background:url(../img/bg_GoStart.jpg) 0 0 no-repeat #fff; }
-#appIntro #appInfo			{ position:absolute; bottom:110px; left:20px; width:480px; color:#666; background:#fff; border:1px #999 solid; }
-#appIntro #appInfo .head	{ font-weight:bold; padding:15px 20px 0; color:#f00; text-align:center; }
-#appIntro #appInfo .text	{ color:#666; font-size:12px; padding:20px 20px 20px; text-align:center; }
-
-
-
-
-
-/* Layout App Deny */
-#appDeny					{ position:absolute; top:0; left:0; width:520px; height:685px; background:url(../img/bg_Error.jpg) 0 0 no-repeat; }
-#appDeny #appInfo			{ position:absolute; bottom:130px; left:20px; width:480px; color:#666; background:#fff; border:1px #999 solid; }
-#appDeny #appInfo .head		{ font-weight:bold; padding:15px 20px 0; color:#f00; text-align:center; }
-#appDeny #appInfo .text		{ color:#666; font-size:12px; padding:20px 20px 20px; text-align:center; }
-
 
 
 
@@ -164,52 +142,55 @@ FORM SELECT OPTION { background:#fff; font-family:OlsenWebPro,serif; font-size:1
 
 
 @media only screen and (max-width: 400px) {
-	body						{ font-size:12px; }
-	#appCalc FORM .info			{ font-size:11px; }
-	#appCalc FORM .item			{ height:32px; margin:0 0 3px 0; }
-	#appCalc FORM .label		{ line-height:28px; }
-	#appCalc FORM .value		{ height:32px; }
-	#appCalc FIELDSET			{ padding:0; margin-bottom:5px; }
-	#appCalc #appResult			{ height:65px; }
-	#appCalc #appResult .result	{ padding-top:5px; font-size:20px; line-height:30px; letter-spacing:1px; }
-	#appCalc #appResult	.hours	{ padding-top:0; font-size:12px; line-height:20px; text-align:center; font-weight:bold;}
+	body							{ font-size:12px; }
+	#appCalc FORM .info				{ font-size:11px; }
+	#appCalc FORM .item				{ height:32px; margin:0 0 3px 0; }
+	#appCalc FORM .label			{ line-height:28px; }
+	#appCalc FORM .value			{ height:32px; }
+	#appCalc FIELDSET				{ padding:0; margin-bottom:5px; }
+	#appCalc .calcResult			{ height:65px; }
+	#appCalc .calcResult .result	{ padding-top:5px; font-size:20px; line-height:30px; letter-spacing:1px; }
+	#appCalc .calcResult .hours		{ padding-top:0; font-size:12px; line-height:20px; text-align:center; font-weight:bold;}
 
 	div.mooForm,
-	div.mooForm SPAN 			{ height:30px; font-size: 11px; line-height:20px; background-image:url(../img/form/sprite_small.png); }
+	div.mooForm SPAN 				{ height:30px; font-size: 11px; line-height:20px; background-image:url(../img/form/sprite_small.png); }
 
+	.mooDialog .mooDialogBody   	{ font-size:11px; }
 }
 
 @media only screen and (max-height: 760px) {
-	body						{ font-size:12px; }
+	body							{ font-size:12px; }
 
-	#appCalc FORM .info			{ font-size:11px; }
-	#appCalc FORM .item			{ height:32px; margin:0 0 3px 0; }
-	#appCalc FORM .label		{ line-height:28px; }
-	#appCalc FORM .value		{ height:32px; }
-	#appCalc FORM IMG			{ width:18px; height:18px; margin-top:5px; }
-	#appCalc FIELDSET			{ padding:0; margin-bottom:5px; }
+	#appCalc .inner					{ position:absolute; top:0; height:100%; margin:0; }
+	#appCalc FORM .info				{ font-size:11px; }
+	#appCalc FORM .item				{ height:32px; margin:0 0 3px 0; }
+	#appCalc FORM .label			{ line-height:28px; }
+	#appCalc FORM .value			{ height:32px; }
+	#appCalc FORM IMG				{ width:18px; height:18px; margin-top:5px; }
+	#appCalc FIELDSET				{ padding:0; margin-bottom:5px; }
 
 	div.mooForm,
-	div.mooForm SPAN 			{ height:30px; font-size: 11px; line-height:20px; background-image:url(../img/form/sprite_small.png); }
+	div.mooForm SPAN 				{ height:30px; font-size: 11px; line-height:20px; background-image:url(../img/form/sprite_small.png); }
 
 	div.mooForm TEXTAREA,
 	div.mooForm SELECT,
-	div.mooForm INPUT,
-	div.mooForm EM {
+	div.mooForm INPUT {
+		height:22px;
+		top: 0;
 		font-size: 11px;
-		top:4px;
 	}
 }
 
 @media only screen and (max-height: 590px) {
-	#appInfo .text				{ display:none; }
-	#appInfo .info				{ display:none; }
-	#appCalc #appResult			{ top:auto; bottom:100px; }
+	#appCalc .calcInfo .text		{ display:none; }
+	#appCalc .calcInfo .info		{ display:none; }
+	#appCalc .calcResult			{ top:auto; bottom:100px; }
+	.mooDialog .mooDialogBody   	{ font-size:11px; }
 }
 
 @media only screen and (max-height: 520px) {
-	#appCalc #appResult			{ height:65px; }
-	#appCalc #appResult .result	{ padding-top:5px; font-size:20px; line-height:30px; letter-spacing:1px; }
-	#appCalc #appResult	.hours	{ padding-top:0; font-size:12px; line-height:20px; text-align:center; font-weight:bold;}
+	#appCalc .calcResult			{ height:65px; }
+	#appCalc .calcResult .result	{ padding-top:5px; font-size:20px; line-height:30px; letter-spacing:1px; }
+	#appCalc .calcResult .hours		{ padding-top:0; font-size:12px; line-height:20px; text-align:center; font-weight:bold;}
 }
 
